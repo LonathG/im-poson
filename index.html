@@ -322,17 +322,32 @@
         }
       });
 
+      // Helper to resume auto-rotation
+      const resumeAutoRotate = () => {
+        setTimeout(() => {
+          viewer.autoRotate = true;
+        }, 300);
+      };
+
       // Listen to AR Status change to hide/show UI and toggle transparency
       viewer.addEventListener('ar-status', (event) => {
         if (event.detail.status === 'session-started') {
           document.body.classList.add('ar-active');
         } else if (event.detail.status === 'not-presenting') {
           document.body.classList.remove('ar-active');
-          // Resume auto-rotation after exiting AR view
-          setTimeout(() => {
-            viewer.autoRotate = true;
-          }, 100);
+          resumeAutoRotate();
         }
+      });
+
+      // Listen for page visibility and window focus changes to resume auto-rotation on iOS return
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+          resumeAutoRotate();
+        }
+      });
+
+      window.addEventListener('focus', () => {
+        resumeAutoRotate();
       });
     });
   </script>
