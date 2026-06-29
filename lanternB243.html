@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magic Lantern #2 - WebAR Experience</title>
+  <title>Magic Lantern #6 - WebAR Experience</title>
 
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Step into a magical WebAR experience and summon Magic Lantern #2 right in your space using Google Model Viewer.">
+    content="Step into a magical WebAR experience and summon Magic Lantern #6 right in your space using Google Model Viewer.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -265,15 +265,14 @@
       max-width: 90vw;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      /* Hide scrollbar for Firefox */
+      scrollbar-width: none; /* Hide scrollbar for Firefox */
     }
 
     /* Hide scrollbar for Chrome, Safari, and Opera */
     .model-switcher::-webkit-scrollbar {
       display: none;
     }
-
+    
     .switcher-btn {
       font-family: 'Outfit', sans-serif;
       font-size: 14px;
@@ -283,15 +282,14 @@
       padding: 8px 16px;
       border-radius: 14px;
       transition: all 0.3s ease;
-      flex-shrink: 0;
-      /* Prevent shrinking in scroll container */
+      flex-shrink: 0; /* Prevent shrinking in scroll container */
     }
-
+    
     .switcher-btn:hover {
       color: var(--text-main);
       background: rgba(255, 255, 255, 0.05);
     }
-
+    
     .switcher-btn.active {
       color: #ffffff;
       background: linear-gradient(135deg, #ffa600 0%, var(--accent-orange) 100%);
@@ -307,26 +305,17 @@
 
 <body>
 
-  <!-- Floating Model Switcher -->
-  <div class="model-switcher">
-    <a href="index.html" class="switcher-btn" id="btn-lantern1">Lantern 1</a>
-    <a href="lantern2.html" class="switcher-btn active" id="btn-lantern2">Lantern 2</a>
-    <a href="lantern3.html" class="switcher-btn" id="btn-lantern3">Lantern 3</a>
-    <a href="lantern4.html" class="switcher-btn" id="btn-lantern4">Lantern 4</a>
-    <a href="lantern5.html" class="switcher-btn" id="btn-lantern5">Lantern 5</a>
-    <a href="lantern6.html" class="switcher-btn" id="btn-lantern6">Lantern 6</a>
-    <a href="lantern7.html" class="switcher-btn" id="btn-lantern7">Lantern 7</a>
-  </div>
+
 
   <!-- Background Glow & Particle Effects -->
   <div class="background-glow"></div>
 
   <!-- Floating Container for Model-Viewer -->
   <div class="viewer-container float-animation">
-    <model-viewer id="lantern-viewer" src="models/lantern2.glb" ios-src="models/lantern2.usdz" ar
+    <model-viewer id="lantern-viewer" src="models/lantern6.glb" ios-src="models/lantern6.usdz" ar
       ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate auto-rotate-delay="0"
       interaction-prompt="none" shadow-intensity="1.5" shadow-softness="1" disable-pan disable-zoom
-      alt="Magic Lantern #2 Floating in 3D Space">
+      alt="Magic Lantern #6 Floating in 3D Space">
 
       <!-- Required slot element for <model-viewer> to link to its internal trigger -->
       <button slot="ar-button" id="hidden-ar-button"></button>
@@ -336,7 +325,7 @@
   <!-- Glassmorphism Card Overlay -->
   <div class="ui-overlay">
     <div>
-      <h1 class="title">Magic Lantern #2</h1>
+      <h1 class="title">Magic Lantern #6</h1>
       <p class="instructions">Point your camera at the ground and press the button below to bring the magic lantern to
         life in your space.</p>
     </div>
